@@ -282,6 +282,18 @@ void nesquick_cpu_execute_instruction(cpu_t *cpu)
             break;
 		}
         break;
+    case OPCODE_PHA:
+        nesquick_cpu_pha(cpu);
+        break;
+    case OPCODE_PHP:
+        nesquick_cpu_php(cpu);
+        break;
+    case OPCODE_PLA:
+        nesquick_cpu_pla(cpu);
+        break;
+    case OPCODE_PLP:
+        nesquick_cpu_plp(cpu);
+        break;
     case OPCODE_STA:
         switch (cpu->instruction.mode)
         {
@@ -335,6 +347,24 @@ void nesquick_cpu_execute_instruction(cpu_t *cpu)
             nesquick_cpu_sty_zpg_x(cpu);
             break;
         }
+        break;
+    case OPCODE_TAX:
+        nesquick_cpu_tax(cpu);
+        break;
+	case OPCODE_TAY:
+        nesquick_cpu_tay(cpu);
+        break;
+    case OPCODE_TSX:
+        nesquick_cpu_tsx(cpu);
+        break;
+    case OPCODE_TXA:
+        nesquick_cpu_txa(cpu);
+        break;
+    case OPCODE_TXS:
+        nesquick_cpu_txs(cpu);
+        break;
+    case OPCODE_TYA:
+        nesquick_cpu_tya(cpu);
         break;
 	}
 }

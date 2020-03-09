@@ -111,7 +111,7 @@ struct CPU
     uint8_t P;
 	uint8_t data;
     uint16_t PC;
-    uint16_t SP;
+    uint8_t SP;
 	
 	// Internal State
 	bool debug;
@@ -139,6 +139,18 @@ void nesquick_cpu_bne(cpu_t *cpu);
 void nesquick_cpu_bpl(cpu_t *cpu);
 void nesquick_cpu_bvc(cpu_t *cpu);
 void nesquick_cpu_bvs(cpu_t *cpu);
+
+// Stack instruction
+void nesquick_cpu_pha(cpu_t *cpu);
+void nesquick_cpu_php(cpu_t *cpu);
+void nesquick_cpu_pla(cpu_t *cpu);
+void nesquick_cpu_plp(cpu_t *cpu);
+void nesquick_cpu_tax(cpu_t *cpu);
+void nesquick_cpu_tay(cpu_t *cpu);
+void nesquick_cpu_tsx(cpu_t *cpu);
+void nesquick_cpu_txa(cpu_t *cpu);
+void nesquick_cpu_txs(cpu_t *cpu);
+void nesquick_cpu_tya(cpu_t *cpu);
 
 // Flag instructions
 void nesquick_cpu_clc(cpu_t *cpu);

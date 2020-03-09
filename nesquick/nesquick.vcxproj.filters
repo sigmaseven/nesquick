@@ -59,5 +59,8 @@
     <ClCompile Include="cpu_store.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cpu_stack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

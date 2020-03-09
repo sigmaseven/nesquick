@@ -160,6 +160,7 @@
     <ClCompile Include="cpu_branch.c" />
     <ClCompile Include="cpu_flags.c" />
     <ClCompile Include="cpu_load.c" />
+    <ClCompile Include="cpu_stack.c" />
     <ClCompile Include="cpu_store.c" />
     <ClCompile Include="ines.c" />
     <ClCompile Include="memory.c" />
